@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exemplo de Sala em A-Frame</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+          <img id="art1" src="./minhafoto.jpg">
+      </a-assets>
+
+        <!-- Piso -->
+        <a-box position="0 0 0" width="10" height="0.1" depth="10" color="#333"></a-box>
+        <!-- Teto -->
+        <a-box position="0 5 0" width="10" height="0.1" depth="10" color="#333"></a-box>
+
+      <!-- Paredes -->
+      <a-box position="-5 2.5 0" rotation="0 90 0" width="10" height="5" depth="0.1" color="#777"></a-box>
+      <a-box position="5 2.5 0" rotation="0 90 0" width="10" height="5" depth="0.1" color="#777"></a-box>
+      <a-box position="0 2.5 -5" rotation="0 0 0" width="10" height="5" depth="0.1" color="#777"></a-box>
+      <a-box position="0 2.5 5" rotation="0 0 0" width="10" height="5" depth="0.1" color="#777"></a-box>
+      <a-plane src="#art1" position="0 2 -4.5" rotation="0 0 0" width="2" height="2.5"></a-plane>
+
+
+      <!-- Iluminação -->
+      <a-light type="ambient" color="#bbb"></a-light>
+      <a-light type="point" position="0 3 0" intensity="0.5" color="#fff"></a-light>
+
+      <!-- Câmera -->
+      <a-entity camera position="0 1.6 0" look-controls></a-entity>
+    </a-scene>
+  </body>
+</html>
